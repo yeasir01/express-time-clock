@@ -1,4 +1,4 @@
-const db = require('../models');
+const Company = require('../models/company');
 const bcrypt = require('bcryptjs');
 const config = require('config');
 const jwt = require('jsonwebtoken');
@@ -12,12 +12,12 @@ module.exports = {
             return res.status(400).json({msg: "Please complete all required fields!"})
         }
 
-        db.Company.findOne({ username })
+        Company.findOne({ username })
             .then(user => {
                 
                 if(user) return res.status(400).json({msg: "That username already exsits!"});
                 
-                const newUser = new db.Company({
+                const newUser = new Company({
                     ...req.body,
                     username,
                     password
@@ -51,7 +51,7 @@ module.exports = {
             return res.status(403).json({msg: "A username & password is required!"})
         }
 
-        db.Company.findOne({ username })
+        Company.findOne({ username })
             .then(user => {
                 
                 if(!user) return res.status(403).json("User does not exist");
@@ -73,7 +73,7 @@ module.exports = {
         }).catch(err => res.status(400).json({msg: err}))
     },
     getUserData: (req, res) => {
-        db.Company.findById(req.user.id)
+        Company.findById(req.user.id)
         .select('-password')
         .then(user => res.json(user))
     }

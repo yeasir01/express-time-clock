@@ -124,14 +124,16 @@ function AdminDashboard() {
 
     if (localToken) {
 
-        const httpHeader = {
+        let config = {
         headers: {
             "x-auth-token": localToken,
-            "content-type": "application/json"
+            'Content-Type': 'application/json'
         }
         }
 
-        API.getUserData(httpHeader)
+        let data = "";
+
+        API.getUserData(data, config)
         .then( res => {
             if (res.status === 200 && !authContext ){
                 setAuthContext(res.data)

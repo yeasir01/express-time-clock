@@ -1,4 +1,7 @@
 module.exports = {
     Company: require("./company"),
-    Records: require("./records")
+    Location: require("./location"),
+    Employee: require("./employee"),
+    Role: require("./role"),
+    ClockIn: require("./clockin"),
 };

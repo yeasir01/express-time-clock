@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const RecordsSchema = new Schema({
+const ClockInSchema = new Schema({
     startTime: {
         type: String,
         required: [true, "a start time is required!"],
@@ -33,6 +33,6 @@ const RecordsSchema = new Schema({
     }
 });
 
-const Records = mongoose.model("Records", RecordsSchema);
+const ClockIn = mongoose.model("ClockIn", ClockInSchema);
 
-module.exports = Records;
+module.exports = ClockIn;

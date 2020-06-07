@@ -1,6 +1,5 @@
 import React from 'react';
 import Box from "@material-ui/core/Box";
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import './style.css';
 import DigitalClock from '../../components/digitial_clock'
