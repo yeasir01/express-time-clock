@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { Link, Redirect } from "react-router-dom";
-import { AuthContext } from "../../context/auth";
+import React, { useState } from 'react';
+import { Link, useHistory } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -46,48 +45,40 @@ const useStyles = makeStyles( theme => ({
   submit: {
       margin: theme.spacing(3, 0, 2),
   },
-  credientialError:{
-      color: theme.palette.secondary.main,
-      fontSize: ".9rem",
-  },
   alert: {
     marginTop: theme.spacing(1),
     width: "100%",
   },
 }));
 
-const SignInSide = () => {
-  
+function SignInSide() {
+  const history = useHistory();
+
   const classes = useStyles();
-  
-  const {authContext, setAuthContext} = useContext(AuthContext)
-  
-  const [authData, setAuthData] = useState({});
-  const [isAuth, setIsAuth] = useState(false);
+  const [userLoginData, setLoginData] = useState();
   const [errorStatus, setErrorStatus] = useState(null);
   
   const handleFormChange = (event) => {
     setErrorStatus(null)
-
+    
     const { name, value } = event.target;
-    setAuthData({...authData, [name]: value})
+    setLoginData({...userLoginData, [name]: value})
   };
 
   const handleFormSubmit = (event) => {
+    
     event.preventDefault();
-    API.authenticateUser(authData)
+    
+    API.authenticateUser(userLoginData)
     .then( res => {
-        let {token, id} = res.data.user;
-
-        localStorage.setItem("user_token", token);
-        localStorage.setItem("user_id", id);
-
-        setAuthContext(res.data.user)
-        setIsAuth(true)
         setErrorStatus(null)
+        let token = res.data.user.token
+        localStorage.setItem("user_token", token);
+        history.push("/admin/dashboard");
     })
     .catch( err => {
         setErrorStatus(err.response.status)
+        localStorage.clear()
     })
   };
   
@@ -98,21 +89,15 @@ const SignInSide = () => {
     } else if(errorStatus === 500) {
       errorMsg = "Internal server issue, please contact admin!";
     } else if (errorStatus === 400) {
-      errorMsg = "Please complete all required fields";
+      errorMsg = "Please complete all required fields!";
+    } else if (errorStatus === 404) {
+      errorMsg = "Unable to communicate with the server!";
     } else {
       errorMsg = "Oops, somthing went wrong!"
     };
 
-  
-
-  document.title = "Express | Admin Login";
-
   return (
     <>
-    
-    {
-      isAuth ? <Redirect to="/dashboard" /> : null
-    }
 
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -124,10 +109,7 @@ const SignInSide = () => {
             Administration Login
           </Typography>
 
-            {errorStatus ? 
-            <Alert severity="error" className={classes.alert}>{errorMsg}</Alert> : 
-            <span></span>
-            }
+          {errorStatus ? <Alert severity="error" className={classes.alert}>{errorMsg}</Alert> : null}
 
           <form className={classes.form} noValidate={false} onSubmit={handleFormSubmit}>
             <TextField
@@ -169,9 +151,7 @@ const SignInSide = () => {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link to="/" variant="body2">
-                  Forgot password?
-                </Link>
+                <Link to="/">Back Home</Link>
               </Grid>
               <Grid item>
                 <Link to="/register" variant="body2">

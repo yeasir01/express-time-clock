@@ -9,13 +9,13 @@ module.exports = {
         const { username, password } = req.body;
         
         if (!username || !password) {
-            return res.status(400).json({msg: "please complete all required fields!"})
+            return res.status(400).json({msg: "Please complete all required fields!"})
         }
 
         db.Company.findOne({ username })
             .then(user => {
                 
-                if(user) return res.status(400).json({msg: "username already exsits!"});
+                if(user) return res.status(400).json({msg: "That username already exsits!"});
                 
                 const newUser = new db.Company({
                     ...req.body,
@@ -54,18 +54,18 @@ module.exports = {
         db.Company.findOne({ username })
             .then(user => {
                 
-                if(!user) return res.send(403, "User does not exist");
+                if(!user) return res.status(403).json("User does not exist");
 
                 bcrypt.compare(password, user.password)
                     .then(isMatch => {
-                        if(!isMatch) return res.send(403, "Invalid credentials");
+                        if(!isMatch) return res.status(403).json("Invalid credentials");
 
                         jwt.sign(
                             {id: user.id}, 
                             config.get('jwtSecert'),
                             (err, token) => {
                                 if(err) throw err;
-                                res.json({user:{id: user.id, email: user.email, token}})
+                                res.json({user:{id: user.id, pass: user.email, token}})
                             }
                         )   
                     })

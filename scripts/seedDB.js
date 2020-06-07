@@ -46,7 +46,17 @@ const companySeed = [{
                         }
                     ],
                     active: false,
-                    pin: "1234"
+                    pin: "1234",
+                    records: [
+                            {   
+                                startTime: "6/5/20 1:00 PM", 
+                                endTime: "6/5/20 5:00 PM", 
+                            }, 
+                            {   
+                                startTime: "6/6/20 2:00 PM", 
+                                endTime: "6/6/20 10:00 PM", 
+                            }
+                    ]
                 },
                 {
                     firstName: "Maxine",

@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from "../../context/auth";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useHistory } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -14,6 +13,7 @@ import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Copyright from '../../components/copyright';
 import API from "../../utils/api";
+import Alert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -33,39 +33,47 @@ const useStyles = makeStyles((theme) => ({
     submit: {
       margin: theme.spacing(3, 0, 2),
     },
+    alert: {
+      marginTop: theme.spacing(1),
+      width: "100%",
+    }
 }));
 
-const SignUp = () => {
+function SignUp() {
+  const history = useHistory();
+
   const classes = useStyles();
-  document.title = "Express Clock | Registration";
   
-  const {setContextData} = useContext(AuthContext)
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState()
+  const [errorMsg, setErrorMsg] = useState(null);
   
-  const handleFormChange = (event) => {
+  const handleFormChange = event => {
     const { name, value } = event.target;
     setFormData({...formData, [name]: value})
+    setErrorMsg(null)
   }
 
   const handleFormSubmit = (event) => {
+    
     event.preventDefault();
     
     API.registerUser(formData)
-    .then((res)=> {
-      let token = res.data.user.token;
-      let id = res.data.user.id;
-
-      localStorage.setItem("user_token", token);
-      localStorage.setItem("user_id", id);
-
-      setContextData(res.data.user)
+    .then( res => {
+        setErrorMsg(null)
+        let token = res.data.user.token
+        localStorage.setItem("user_token", token);
+        history.push("/admin/dashboard");
     })
-    .catch((err)=> {
-        console.log(err)
+    .catch( err => {
+        setErrorMsg(err.response.data.msg)
+        localStorage.clear()
     })
-  }
-
+  };
+  
+  document.title = "Express Clock | Registration";
+  
   return (
+    <>
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -73,6 +81,7 @@ const SignUp = () => {
         <Typography component="h1" variant="h5">
         Registration Form
         </Typography>
+        {errorMsg ? <Alert severity="error" className={classes.alert}>{errorMsg}</Alert> : null}
         <form className={classes.form} noValidate={false} onSubmit={handleFormSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
@@ -224,6 +233,7 @@ const SignUp = () => {
         <Copyright />
       </Box>
     </Container>
+    </>
   );
 }
 
