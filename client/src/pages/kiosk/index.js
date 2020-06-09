@@ -2,7 +2,7 @@ import React from 'react';
 import Box from "@material-ui/core/Box";
 import Grid from '@material-ui/core/Grid';
 import './style.css';
-import DigitalClock from '../../components/digitial_clock'
+import DigitalClock from '../../components/DigitialClock'
 
 function Kiosk(){
     return(

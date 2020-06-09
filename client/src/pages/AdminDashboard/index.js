@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Route, useHistory } from "react-router-dom";
-import { AuthContext } from "../../context/auth";
-import Loader from '../../components/loader'
-import API from '../../utils/api';
+import { AuthContext } from "../../context/Auth";
+import Loader from '../../components/Loader'
+import API from '../../utils/Api';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -17,12 +17,12 @@ import IconButton from '@material-ui/core/IconButton';
 import Container from '@material-ui/core/Container';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import { mainListItems } from '../../components/listitems';
-import Copyright from '../../components/copyright'
+import { mainListItems } from '../../components/ListItems';
+import Copyright from '../../components/Copyright'
 import Avatar from '@material-ui/core/Avatar';
-import AvatarImg from './Profile_avatar_placeholder_large.png';
-import DashboardContent from '../../components/dashboard_content';
-import LocationList from '../../components/locationslist';
+import AvatarImg from './placeholder_large.png';
+import DashboardContent from '../../components/DashboardContent';
+import LocationList from '../../components/LocationsList';
 
 const drawerWidth = 240;
 

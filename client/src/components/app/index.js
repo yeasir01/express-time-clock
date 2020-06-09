@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from '../../pages/homepage'
-import Kiosk from '../../pages/kiosk'
-import LoginPage from '../../pages/login';
-import RegisterPage from '../../pages/register';
-import AdminDashboard from '../../pages/admin_dashboard';
-import { AuthContext } from "../../context/auth";
+import Home from '../../pages/Homepage'
+import Kiosk from '../../pages/Kiosk'
+import LoginPage from '../../pages/Login';
+import RegisterPage from '../../pages/Register';
+import AdminDashboard from '../../pages/AdminDashboard';
+import { AuthContext } from '../../context/Auth';
 
 function App() {
     

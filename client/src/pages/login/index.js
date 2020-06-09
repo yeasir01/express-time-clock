@@ -11,10 +11,10 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Copyright from '../../components/copyright';
-import API from '../../utils/api';
-import BackgroundImg from './workplace.jpg'
 import Alert from '@material-ui/lab/Alert';
+import Copyright from '../../components/Copyright';
+import API from '../../utils/Api';
+import BackgroundImg from './workplace.jpg'
 
 const useStyles = makeStyles( theme => ({
   root: {

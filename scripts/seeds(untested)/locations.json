@@ -1,0 +1,128 @@
+[
+  {
+    "_id": "5edc00f6b148c2d88178493a",
+    "locationName": {
+      "type": "[object Object]",
+      "required": [true, "a location name is required!"],
+      "trim": true
+    },
+    "address": "[object Object]",
+    "city": "[object Object]",
+    "state": "[object Object]",
+    "postalCode": "[object Object]",
+    "phone": "[object Object]",
+    "employees": [],
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:47:50 GMT+0000 (UTC)",
+      "default": 1591476470651
+    }
+  },
+  {
+    "_id": "5edc00f6b205e70446d05dff",
+    "locationName": {
+      "type": "[object Object]",
+      "required": [true, "a location name is required!"],
+      "trim": true
+    },
+    "address": "[object Object]",
+    "city": "[object Object]",
+    "state": "[object Object]",
+    "postalCode": "[object Object]",
+    "phone": "[object Object]",
+    "employees": [],
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:47:50 GMT+0000 (UTC)",
+      "default": 1591476470652
+    }
+  },
+  {
+    "_id": "5edc00f6b73b0bd6bab6bb75",
+    "locationName": {
+      "type": "[object Object]",
+      "required": [true, "a location name is required!"],
+      "trim": true
+    },
+    "address": "[object Object]",
+    "city": "[object Object]",
+    "state": "[object Object]",
+    "postalCode": "[object Object]",
+    "phone": "[object Object]",
+    "employees": [],
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:47:50 GMT+0000 (UTC)",
+      "default": 1591476470652
+    }
+  },
+  {
+    "_id": "5edc00f61e2a0ca38ea6ee4d",
+    "locationName": {
+      "type": "[object Object]",
+      "required": [true, "a location name is required!"],
+      "trim": true
+    },
+    "address": "[object Object]",
+    "city": "[object Object]",
+    "state": "[object Object]",
+    "postalCode": "[object Object]",
+    "phone": "[object Object]",
+    "employees": [],
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:47:50 GMT+0000 (UTC)",
+      "default": 1591476470652
+    }
+  },
+  {
+    "_id": "5edc00f6d65d5408b6599033",
+    "locationName": {
+      "type": "[object Object]",
+      "required": [true, "a location name is required!"],
+      "trim": true
+    },
+    "address": "[object Object]",
+    "city": "[object Object]",
+    "state": "[object Object]",
+    "postalCode": "[object Object]",
+    "phone": "[object Object]",
+    "employees": [],
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:47:50 GMT+0000 (UTC)",
+      "default": 1591476470652
+    }
+  },
+  {
+    "_id": "5edc00f6ec4a1aa5536424a0",
+    "locationName": {
+      "type": "[object Object]",
+      "required": [true, "a location name is required!"],
+      "trim": true
+    },
+    "address": "[object Object]",
+    "city": "[object Object]",
+    "state": "[object Object]",
+    "postalCode": "[object Object]",
+    "phone": "[object Object]",
+    "employees": [],
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:47:50 GMT+0000 (UTC)",
+      "default": 1591476470652
+    }
+  },
+  {
+    "_id": "5edc00f64052e093228edf21",
+    "locationName": {
+      "type": "[object Object]",
+      "required": [true, "a location name is required!"],
+      "trim": true
+    },
+    "address": "[object Object]",
+    "city": "[object Object]",
+    "state": "[object Object]",
+    "postalCode": "[object Object]",
+    "phone": "[object Object]",
+    "employees": [],
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:47:50 GMT+0000 (UTC)",
+      "default": 1591476470652
+    }
+  }
+]

@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import './style.css';
 import MangImg from "./managment-resized.png"
 import EmpImg from "./clerks.png"
-import HomePageBar from "../../components/homepage_header";
+import HomePageBar from "../../components/HomepageHeader";
 
 function HomePage(){
     

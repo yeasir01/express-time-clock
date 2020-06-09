@@ -1,0 +1,182 @@
+[
+  {
+    "_id": "5edc01a488d9de9d21123e94",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a4df9df179b4d90c05",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a48efbb8eae3e7454e",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a47b9de85ab8659f0d",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a407e9108e6b754830",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a476c9c5ccdc5bd6aa",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a42e63ba09ed7a9329",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a41c2f227e781f9976",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a4658e4a0133355383",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  },
+  {
+    "_id": "5edc01a4905a10fbbcaa0e51",
+    "description": {
+      "type": "[object Object]",
+      "required": [true, "a role description is required!"],
+      "trim": true
+    },
+    "payRate": {
+      "type": "[object Object]",
+      "required": [true, "a last name is required!"],
+      "trim": true
+    },
+    "createdOn": {
+      "type": "Sat Jun 06 2020 20:50:44 GMT+0000 (UTC)",
+      "default": 1591476644348,
+      "required": true
+    }
+  }
+]

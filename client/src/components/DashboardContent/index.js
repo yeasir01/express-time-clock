@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Chart from '../chart';
-import Deposits from '../deposits';
-import Orders from '../orders';
+import Chart from '../Chart';
+import Deposits from '../Deposits';
+import Orders from '../Orders';
 import clsx from 'clsx';
 
 const drawerWidth = 240;
