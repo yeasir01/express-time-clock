@@ -65,7 +65,8 @@ function SignUp() {
         history.push("/admin/dashboard");
     })
     .catch( err => {
-        setErrorMsg(err.response.data.msg)
+        const errMsg = `Somthing went wrong! Error: ${err.res.status}`
+        setErrorMsg(errMsg)
         localStorage.clear()
     })
   };

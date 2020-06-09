@@ -11,10 +11,6 @@ body {
     background-color: #eeeeee;
 }
 .cont-height{
-    min-height: -o-calc(100vh - 65px); /* opera */
-    min-height: -webkit-calc(100vh - 65px); /* google, safari */
-    min-height: -moz-calc(100vh - 65px); /* firefox */
-    min-height: calc(100vh - 65px);
     display: flex;
     align-items: center;
     justify-content: center;

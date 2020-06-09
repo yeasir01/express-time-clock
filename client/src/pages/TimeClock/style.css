@@ -1,0 +1,31 @@
+.center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.full-width {
+    width: 100%;
+    display: block;
+}
+
+.cont-height{
+    min-height: -o-calc(100vh - 92px); /* opera */
+    min-height: -webkit-calc(100vh - 92px); /* google, safari */
+    min-height: -moz-calc(100vh - 92px); /* firefox */
+    min-height: calc(100vh - 92px); /* rest */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-text {
+    font-size: 1.5rem;
+}
+
+.status-red{
+    color: red;
+}
+
+.status-green{
+    color: green;
+}

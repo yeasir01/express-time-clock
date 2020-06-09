@@ -7,6 +7,7 @@ import './style.css';
 import MangImg from "./managment-resized.png"
 import EmpImg from "./clerks.png"
 import HomePageBar from "../../components/HomepageHeader";
+import Copyright from "../../components/Copyright"
 
 function HomePage(){
     
@@ -51,6 +52,7 @@ function HomePage(){
                 { isAuth ? loggedIn : loggedOut}    
             </Grid>
         </Grid>
+        <Copyright />
         </>
     )
 }

@@ -28,7 +28,7 @@
       "trim": true
     },
     "address": "[object Object]",
-    "city": "[object Object]",
+    "city": "{[object Object]}",
     "state": "[object Object]",
     "postalCode": "[object Object]",
     "Locations": [],
